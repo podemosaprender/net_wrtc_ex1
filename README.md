@@ -9,6 +9,8 @@ Simplified, remove any code not required for our application.
 Next steps:
 
 1. Separate peer1, peer2, signaling server
+    * signaling handled through ./src/lib/server/rest/connectionsapi.js calling `ConnectionManager`
+
 2. Tunnel TCP connection, e.g. ssh
     SEE: https://gist.github.com/khalil19/0d69f6ed4213d6c6719c5e3db535b2d6#file-tcp_client-js https://gist.github.com/khalil19/ea89bfebcfb666839d7797dcc43f98cf#file-tcp_server-js
 
