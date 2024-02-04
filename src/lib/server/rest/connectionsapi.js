@@ -1,11 +1,11 @@
 'use strict';
 
 function mount(app, connectionManager, prefix = '') {
-  app.get(`${prefix}/connections`, (req, res) => {
+	app.get(`${prefix}/connections`, (req, res) => { //U: existing
     res.send(connectionManager.getConnections());
   });
 
-  app.post(`${prefix}/connections`, async (req, res) => {
+	app.post(`${prefix}/connections`, async (req, res) => { //U: register peer
     try {
       const connection = await connectionManager.createConnection();
       res.send(connection);
@@ -15,7 +15,7 @@ function mount(app, connectionManager, prefix = '') {
     }
   });
 
-  app.delete(`${prefix}/connections/:id`, (req, res) => {
+	app.delete(`${prefix}/connections/:id`, (req, res) => { //U: unregister peer
     const { id } = req.params;
     const connection = connectionManager.getConnection(id);
     if (!connection) {

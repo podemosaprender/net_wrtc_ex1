@@ -2,7 +2,17 @@
 
 Connect P2P node to node or node to browser to send data via WebRTC (works behind firewalls)
 
-FROM: https://github.com/node-webrtc/node-webrtc
+## RESULTS
+* wRTC npm package to connect via WebRTC from node to node or browser to node works
+* adapting the ad-hoc HTTP post/get signaling server seems too hard/not worth the effort, try peerjs
+* ABANDONED, but keep the repo for LEARNING purposes
+
+* SEE https://www.npmjs.com/package/peerjs-on-node
+* SEE https://github.com/node-webrtc/node-webrtc
+* SEE signaling https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation?ref=dyte.io
+
+## Details
+FROM: examples linked FROM https://github.com/node-webrtc/node-webrtc
 
 Simplified, remove any code not required for our application.
 
